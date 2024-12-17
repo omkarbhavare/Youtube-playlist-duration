@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Playlist Analyzer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Arial", sans-serif;
+    }
+
+    body {
+      width: 350px;
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 1.3rem;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #f1f1f1;
+    }
+
+    input, button {
+      width: 100%;
+      margin: 5px 0 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    input {
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    input:focus {
+      outline: 2px solid #4ca1af;
+    }
+
+    button {
+      background-color: #1abc9c;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #16a085;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 5px 0;
+      color: #ddd;
+    }
+
+    #totalTime, #adjustedTime {
+      margin: 10px 0;
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+      background-color: #34495e;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>YouTube Playlist Analyzer</h1>
+  
+  <input type="text" id="playlistUrl" placeholder="Paste YouTube Playlist URL Here">
+  <button id="fetchPlaylist">Fetch Playlist Duration</button>
+  
+  <div id="totalTime">Total Duration: --</div>
+  
+  <label for="playbackSpeed">Playback Speed:</label>
+  <input type="number" id="playbackSpeed" step="0.1" min="0.1" value="1.0">
+  
+  <div id="adjustedTime">Adjusted Duration: --</div>
+
+  <footer>Built with ❤️ by Omkar Bhavare</footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
